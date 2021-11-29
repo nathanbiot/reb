@@ -1,28 +1,13 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Shiny;
 
 namespace reb
 {
-    public partial class App : Application
+    public partial class App : FrameworkApplication
     {
-        public App()
+        protected override void Initialize()
         {
-            InitializeComponent();
-
-            MainPage = new MainPage();
-        }
-
-        protected override void OnStart()
-        {
-        }
-
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
+            this.InitializeComponent();
+            base.Initialize();
         }
     }
 }
