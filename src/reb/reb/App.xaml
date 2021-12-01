@@ -3,6 +3,4 @@
     x:Class="reb.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:shiny="http://shinylib.net">
-    <Application.Resources />
-</shiny:FrameworkApplication>
+    xmlns:shiny="http://shinylib.net" />
