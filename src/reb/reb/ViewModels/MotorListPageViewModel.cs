@@ -1,18 +1,13 @@
-﻿using Prism.Navigation;
-using System;
-using Shiny;
+﻿namespace reb.ViewModels;
 
-namespace reb.ViewModels
+public class MotorListPageViewModel : ViewModel
 {
-    public class MotorListPageViewModel : ViewModel
+    private INavigationService _navigationService;
+
+    public MotorListPageViewModel(
+        INavigationService navigationService
+        )
     {
-        private INavigationService _navigationService;
-        
-        public MotorListPageViewModel(
-            INavigationService navigationService
-            )
-        {
-            _navigationService = navigationService;
-        }
+        _navigationService = navigationService;
     }
 }
