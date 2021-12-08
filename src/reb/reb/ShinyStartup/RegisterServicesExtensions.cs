@@ -1,11 +1,33 @@
-﻿namespace reb.ShinyStartup;
+﻿using reb.Logging;
+
+namespace reb.ShinyStartup;
 
 public static class RegisterServicesExtensions
 {
-    public static void RegisterSettings(this IServiceCollection services, IConfigurationRoot configuration)
+
+    public static void RegisterLoggers(this ILoggingBuilder builder)
     {
-        services.Configure<GeneralLoggingSettings>(configuration.GetSection($"Logging:{nameof(GeneralLoggingSettings)}"), options => options.BindNonPublicProperties = true);
-        services.Configure<FileLoggerSettings>(configuration.GetSection($"Logging:{nameof(FileLoggerSettings)}"), options => options.BindNonPublicProperties = true);
-        services.Configure<AppCenterSettings>(configuration.GetSection($"Logging:{nameof(AppCenterSettings)}"), options => options.BindNonPublicProperties = true);
+        builder.ClearProviders();
+#if DEBUG        
+        builder.AddConsole();
+#endif
+
+        builder.AddProvider<LimitedFileLoggingProvider>();
+        builder.AddProvider<CustomAppCenterLoggingProvider>();
     }
+
+    public static ILoggingBuilder AddProvider<T>(this ILoggingBuilder builder)
+            where T : class, ILoggerProvider
+    {
+        builder.Services.AddSingleton<ILoggerProvider, T>();
+        return builder;
+    }
+
+    public static ILoggingBuilder AddProvider<T>(this ILoggingBuilder builder, Func<IServiceProvider, T> factory)
+    where T : class, ILoggerProvider
+    {
+        builder.Services.AddSingleton<ILoggerProvider, T>(factory);
+        return builder;
+    }
+
 }

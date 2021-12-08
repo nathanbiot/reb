@@ -2,7 +2,7 @@
 
 public class AppCenterSettings
 {
+    public bool IsEnabled { get; set; }
+    public LogLevel? LogLevel { get; private set; }
     public string Secret { get; private set; }
-    public string TrackCrashes { get; private set; }
-    public string TrackEvents { get; private set; }
 }
