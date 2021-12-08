@@ -205,3 +205,10 @@ FakesAssemblies/
 
 # Jetbrains files
 .idea*
+
+
+
+# App settings files with secrets
+*.appsettings.json
+*.appsettings.debug.json
+*.appsettings.release.json
