@@ -16,18 +16,14 @@
     <None Remove="Settings\appsettings.debug.json" />
     <None Remove="Settings\appsettings.json" />
     <None Remove="Settings\appsettings.release.json" />
+    <None Remove="Settings\AppSettings\SettingsFiles\appsettings.sample.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Settings\AppSettings\SettingsFiles\appsettings.debug.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Settings\AppSettings\SettingsFiles\appsettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Settings\AppSettings\SettingsFiles\appsettings.release.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\AppSettings\SettingsFiles\appsettings.debug.json" />
+    <EmbeddedResource Include="Settings\AppSettings\SettingsFiles\appsettings.json" />
+    <EmbeddedResource Include="Settings\AppSettings\SettingsFiles\appsettings.release.json" />
+    <EmbeddedResource Include="Settings\AppSettings\SettingsFiles\appsettings.sample.json" />
   </ItemGroup>
 
   <ItemGroup>

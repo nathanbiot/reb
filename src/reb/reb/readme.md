@@ -1,0 +1,1 @@
+﻿To build, you need to create in reb/Settings/AppSettings/SettingsFiles the files "appsettings.json", "appsettings.debug.json" and "appsettings.release.json" and then, based on the "appsettings.sample.json", fill the values with what you want. The "appsettings.json" file will take the right values based on which configuration you launch the app. 
