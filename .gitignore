@@ -209,6 +209,6 @@ FakesAssemblies/
 
 
 # App settings files with secrets
-*.appsettings.json
-*.appsettings.debug.json
-*.appsettings.release.json
+appsettings.json
+appsettings.debug.json
+appsettings.release.json
