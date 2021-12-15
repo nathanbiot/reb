@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="reb.Views.BaseContentPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+    material:MaterialNavigationPage.AppBarColor="{AppThemeBinding Light={StaticResource LightSurfaceColor},
+                                                                  Dark={StaticResource DarkSurfaceColor}}"
+    material:MaterialNavigationPage.AppBarTitleTextColor="{AppThemeBinding Light={StaticResource OnLightSurfaceColor},
+                                                                           Dark={StaticResource OnDarkSurfaceColor}}"
+    material:MaterialNavigationPage.StatusBarColor="{AppThemeBinding Light={StaticResource LightSurfaceColor},
+                                                                     Dark={StaticResource DarkSurfaceColor}}"
+    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackgroundColor},
+                                      Dark={StaticResource DarkBackgroundColor}}" />

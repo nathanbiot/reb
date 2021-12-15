@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<StackLayout
+    x:Class="reb.Controls.BodyTextWithLabel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material">
+
+
+    <material:MaterialLabel x:Name="LabelLabel" TypeScale="Overline" />
+    <material:MaterialLabel x:Name="TextLabel" TypeScale="Body1" />
+
+</StackLayout>

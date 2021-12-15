@@ -126,4 +126,19 @@
   <data name="ErrorTitle" xml:space="preserve">
     <value>Erreur</value>
   </data>
+  <data name="MotorList_NoMotor" xml:space="preserve">
+    <value>Aucun moteur pour le moment.</value>
+  </data>
+  <data name="MotorList_Search" xml:space="preserve">
+    <value>Rechercher parmi {0} moteurs.</value>
+  </data>
+  <data name="MotorList_Brand" xml:space="preserve">
+    <value>Marque</value>
+  </data>
+  <data name="MotorList_NotchesNumber" xml:space="preserve">
+    <value>Nombre d'encoches</value>
+  </data>
+  <data name="MotorList_Powers" xml:space="preserve">
+    <value>Puissances</value>
+  </data>
 </root>

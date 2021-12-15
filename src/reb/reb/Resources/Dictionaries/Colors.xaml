@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="reb.Resources.Dictionaries.Colors"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="PrimaryColor">#5e35b1</Color>
+    <Color x:Key="PrimaryColorLight">#9162e4</Color>
+    <Color x:Key="PrimaryColorDark">#280680</Color>
+    <Color x:Key="OnPrimaryColor">#FFFFFF</Color>
+
+    <Color x:Key="SecondaryColor">#fdd835</Color>
+    <Color x:Key="SecondaryColorLight">#ffff6b</Color>
+    <Color x:Key="SecondaryColorDark">#c6a700</Color>
+    <Color x:Key="OnSecondaryColor">#000000</Color>
+
+    <Color x:Key="LightBackgroundColor">#eceff1</Color>
+    <Color x:Key="OnLightBackgroundColor">#000000</Color>
+
+    <Color x:Key="LightSurfaceColor">#FFFFFF</Color>
+    <Color x:Key="OnLightSurfaceColor">#000000</Color>
+
+    <Color x:Key="DarkBackgroundColor">#263238</Color>
+    <Color x:Key="OnDarkBackgroundColor">#FFFFFF</Color>
+
+    <Color x:Key="DarkSurfaceColor">#000a12</Color>
+    <Color x:Key="OnDarkSurfaceColor">#FFFFFF</Color>
+
+    <Color x:Key="ErrorColor">#b00020</Color>
+    <Color x:Key="OnErrorColor">#ffffff</Color>
+
+    <Color x:Key="DividerColor">#9e9e9e</Color>
+
+</ResourceDictionary>

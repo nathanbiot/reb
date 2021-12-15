@@ -1,13 +1,11 @@
-﻿using Shiny;
+﻿namespace reb;
 
-namespace reb
+public partial class App : FrameworkApplication
 {
-    public partial class App : FrameworkApplication
+    protected override void Initialize()
     {
-        protected override void Initialize()
-        {
-            this.InitializeComponent();
-            base.Initialize();
-        }
+        InitializeComponent();
+        
+        base.Initialize();
     }
 }

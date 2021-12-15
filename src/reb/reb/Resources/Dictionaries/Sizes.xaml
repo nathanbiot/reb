@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="reb.Resources.Dictionaries.Sizes"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Thickness x:Key="BaseMargin">8</Thickness>
+    <Thickness x:Key="SmallVerticalBaseHorizontalMargin">8,4</Thickness>
+    <Thickness x:Key="BigMargin">16</Thickness>
+
+    <Thickness x:Key="BaseSpacing">8</Thickness>
+
+</ResourceDictionary>

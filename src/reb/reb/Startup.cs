@@ -1,6 +1,5 @@
 ﻿using Prism.Ioc;
-using reb.Logging;
-using System.Reflection;
+using XF.Material.Forms.UI;
 
 namespace reb;
 
@@ -9,7 +8,7 @@ public class Startup : FrameworkStartup
     public override Task RunApp(INavigationService navigator)
     {
         // perform your inital navigation here
-        return navigator.Navigate($"/NavigationPage/{NavigationKeys.MotorList}");
+        return navigator.Navigate($"/{NavigationKeys.NavigationPage}/{NavigationKeys.MotorList}");
     }
 
     // all of your prism & shiny registrations in one place
@@ -42,7 +41,8 @@ public class Startup : FrameworkStartup
     public override void ConfigureApp(Application app, IContainerRegistry containerRegistry)
     {
         // register your viewmodels and any services that are specific only to your UI
-        containerRegistry.RegisterForNavigation<NavigationPage>();
+        containerRegistry.RegisterForNavigation<MaterialNavigationPage>(NavigationKeys.NavigationPage);
         containerRegistry.RegisterForNavigation<MotorListPage, MotorListPageViewModel>(NavigationKeys.MotorList);
+        containerRegistry.RegisterForNavigation<MotorDetailsPage, MotorDetailsPageViewModel>(NavigationKeys.MotorDetails);
     }
 }

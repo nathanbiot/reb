@@ -1,17 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
+<views:BaseContentPage
     x:Class="reb.Views.MotorListPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:reb.Controls"
+    xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+    xmlns:models="clr-namespace:reb.Models"
     xmlns:viewmodels="clr-namespace:reb.ViewModels"
+    xmlns:views="clr-namespace:reb.Views"
     Title="{Binding [MotorList_Title]}"
     x:DataType="viewmodels:MotorListPageViewModel">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms MotorList!"
-                VerticalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+
+    <controls:CustomCollectionView
+        ItemsSource="{Binding Motors}"
+        SelectedItem="{Binding SelectedMotor}"
+        SelectionChangedCommand="{Binding SelectedMotorChanged}"
+        SelectionMode="Single"
+        VerticalScrollBarVisibility="Always">
+        <CollectionView.EmptyView>
+            <StackLayout>
+                <Label
+                    Margin="{StaticResource BigMargin}"
+                    HorizontalOptions="Center"
+                    Text="{Binding [MotorList_NoMotor]}" />
+            </StackLayout>
+        </CollectionView.EmptyView>
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="models:Motor">
+                <StackLayout Margin="0" Padding="8,4">
+                    <StackLayout>
+                        <controls:BodyTextWithLabel Label="{Binding [MotorList_Brand], Source={RelativeSource AncestorType={x:Type viewmodels:MotorListPageViewModel}}}" Text="{Binding Brand}" />
+                        <controls:BodyTextWithLabel Label="{Binding [MotorList_NotchesNumber], Source={RelativeSource AncestorType={x:Type viewmodels:MotorListPageViewModel}}}" Text="{Binding NotchesNumber}" />
+                        <material:MaterialLabel Text="{Binding [MotorList_Powers], Source={RelativeSource AncestorType={x:Type viewmodels:MotorListPageViewModel}}}" TypeScale="Overline" />
+                        <StackLayout
+                            Margin="0"
+                            Padding="0"
+                            BindableLayout.ItemsSource="{Binding Nameplate.MotorSetups}"
+                            Orientation="Vertical">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate x:DataType="models:MotorSetup">
+                                    <material:MaterialLabel Text="{Binding Power, StringFormat='{0} kW'}" TypeScale="Body1" />
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </StackLayout>
+                    </StackLayout>
+                    <controls:Divider />
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </controls:CustomCollectionView>
+
+</views:BaseContentPage>

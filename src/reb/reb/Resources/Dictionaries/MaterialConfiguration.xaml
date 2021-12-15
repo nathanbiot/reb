@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="reb.Resources.Dictionaries.MaterialConfiguration"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dictionaries="clr-namespace:reb.Resources.Dictionaries"
+    xmlns:mtrl="clr-namespace:XF.Material.Forms.Resources;assembly=XF.Material">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dictionaries:Colors />
+    </ResourceDictionary.MergedDictionaries>
+
+    <mtrl:MaterialColorConfiguration
+        x:Key="Material.Color"
+        Background="{AppThemeBinding Light={StaticResource LightBackgroundColor},
+                                     Dark={StaticResource DarkBackgroundColor}}"
+        Error="{StaticResource ErrorColor}"
+        OnBackground="{AppThemeBinding Light={StaticResource OnLightBackgroundColor},
+                                       Dark={StaticResource OnDarkBackgroundColor}}"
+        OnError="{StaticResource OnErrorColor}"
+        OnPrimary="{StaticResource OnPrimaryColor}"
+        OnSecondary="{StaticResource OnSecondaryColor}"
+        OnSurface="{AppThemeBinding Light={StaticResource OnLightSurfaceColor},
+                                    Dark={StaticResource OnDarkSurfaceColor}}"
+        Primary="{StaticResource PrimaryColor}"
+        PrimaryVariant="{StaticResource PrimaryColorDark}"
+        Secondary="{StaticResource SecondaryColor}"
+        SecondaryVariant="{StaticResource SecondaryColorDark}"
+        Surface="{AppThemeBinding Light={StaticResource LightSurfaceColor},
+                                  Dark={StaticResource DarkSurfaceColor}}" />
+
+    <mtrl:MaterialConfiguration x:Key="Material.Configuration" ColorConfiguration="{StaticResource Material.Color}" />
+</ResourceDictionary>

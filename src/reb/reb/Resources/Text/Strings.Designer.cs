@@ -79,6 +79,51 @@ namespace reb.Resources.Text {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Brand.
+        /// </summary>
+        internal static string MotorList_Brand {
+            get {
+                return ResourceManager.GetString("MotorList_Brand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No motor yet..
+        /// </summary>
+        internal static string MotorList_NoMotor {
+            get {
+                return ResourceManager.GetString("MotorList_NoMotor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notches number.
+        /// </summary>
+        internal static string MotorList_NotchesNumber {
+            get {
+                return ResourceManager.GetString("MotorList_NotchesNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Powers.
+        /// </summary>
+        internal static string MotorList_Powers {
+            get {
+                return ResourceManager.GetString("MotorList_Powers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search in {0} motors..
+        /// </summary>
+        internal static string MotorList_Search {
+            get {
+                return ResourceManager.GetString("MotorList_Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Motors.
         /// </summary>
         internal static string MotorList_Title {

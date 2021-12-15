@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="reb.Resources.Dictionaries.Styles"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dictionaries="clr-namespace:reb.Resources.Dictionaries"
+    xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dictionaries:Colors />
+        <dictionaries:Sizes />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="StackLayout">
+        <Setter Property="Spacing" Value="{StaticResource BaseSpacing}" />
+        <Setter Property="Margin" Value="{StaticResource BaseMargin}" />
+    </Style>
+
+    <Style TargetType="material:MaterialCard">
+        <Setter Property="Padding" Value="{StaticResource BaseMargin}" />
+    </Style>
+
+</ResourceDictionary>

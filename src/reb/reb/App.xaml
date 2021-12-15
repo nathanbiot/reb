@@ -3,4 +3,17 @@
     x:Class="reb.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:shiny="http://shinylib.net" />
+    xmlns:dictionaries="clr-namespace:reb.Resources.Dictionaries"
+    xmlns:shiny="http://shinylib.net">
+
+    <shiny:FrameworkApplication.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <dictionaries:Colors />
+                <dictionaries:Sizes />
+                <dictionaries:Styles />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </shiny:FrameworkApplication.Resources>
+
+</shiny:FrameworkApplication>
